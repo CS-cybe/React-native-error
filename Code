@@ -1,0 +1,134 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ */
+
+import React from 'react';
+import { Image, Text, TextInput, View } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+
+
+function InputFields() {
+
+  return (
+
+    <View style={{
+      alignItems: 'center',
+    }}>
+
+    
+
+      <View style={{
+        backgroundColor: 'white',
+        height: 50,
+        borderRadius: 35,
+        width: 300,
+        marginTop: 40,
+        elevation:20
+
+      }}>
+
+        <TextInput style={{
+          color: 'black',
+          marginLeft: 20
+
+        }} placeholder='User name' placeholderTextColor={'black'}>
+
+
+        </TextInput>
+      </View>
+
+      <View style={{
+        backgroundColor: 'white',
+        height: 50,
+        borderRadius: 35,
+        width: 300,
+        marginTop: 40,
+        elevation:20
+
+      }}>
+
+        <TextInput style={{
+          color: 'black',
+          marginLeft: 20
+          
+
+        }} placeholder='Password' secureTextEntry={true} placeholderTextColor={'black'}>  </TextInput>
+      </View>
+
+    </View>
+
+
+  );
+
+
+
+
+}
+
+function App(): React.JSX.Element {
+
+
+
+  return (
+
+    <View style={{
+
+    }}>
+
+      <View style={{
+        alignItems: 'center',
+      }}>
+
+        <Image source={require('./assets/img/login_background.jpg')}
+          style={{
+  
+            width:'100%',
+            height: '500%',
+            position: 'absolute',
+            
+
+          }}
+
+         
+          
+
+        />
+
+        <Text style={{
+          fontSize: 30,
+          color: '#fff',
+
+          fontWeight: 'bold',
+          marginTop: 200,
+          fontFamily: 'GothamRounded-Book'
+        }}> {'Welcome Unity_Mart'}
+
+
+        </Text>
+
+      </View>
+
+      <KeyboardAwareScrollView keyboardShouldPersistTaps={'never'}>
+
+      <InputFields />
+      
+      </KeyboardAwareScrollView>
+      
+
+
+
+
+
+    </View>
+
+
+
+  );
+};
+
+
+
+export default App;
